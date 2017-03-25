@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">LoveBox</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="delete_notes_alert">Do You Want to Delete this/these %d notes</string>
+    <string name="wishlist">WishList</string>
+    <string name="randomselect">Random Select</string>
+    <string name="anniversary">Anniversary</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
+
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+    <string name="title_activity_view_note">Note</string>
+    <string name="action_edit_note">Edit note</string>
+    <string name="label_created_at">Created at:</string>
+    <string name="label_updated_at">Updated at:</string>
+
+
+    <string name="title_activity_edit_note">Edit note</string>
+    <string name="action_save">Save</string>
+    <string name="hint_note_title">Title</string>
+    <string name="hint_note_content">Content</string>
+    <string name="title_required">The note must have a title</string>
+    <string name="content_required">The note must have content</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
