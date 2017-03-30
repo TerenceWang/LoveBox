@@ -38,6 +38,8 @@ import java.util.Random;
 
 import butterknife.InjectView;
 
+import static com.example.lb.lovebox.Util.user;
+
 /**
  * Created by terence on 3/18/17.
  */
@@ -62,12 +64,21 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         AVOSCloud.initialize(this, "UMCbxIR2qsFpHuL7A9I3iDeG-gzGzoHsz", "blEFXgbKNoGz324Ay6TMtYte");
-        if (AVUser.getCurrentUser() == null) {
+        user = AVUser.getCurrentUser();
+        if(user == null) {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
+            return;
         }
-        AVUser user = AVUser.getCurrentUser();
+//        if(user == null){
+//
+//        }else{
+//            user.logOut();
+//            Intent intent = new Intent(this, LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -121,7 +132,7 @@ public class MainActivity extends ActionBarActivity {
                         return true;
 
                     case R.id.logout:
-
+                        user.logOut();
                         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent);
                         finish();

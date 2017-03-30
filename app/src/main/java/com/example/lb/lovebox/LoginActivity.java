@@ -22,6 +22,7 @@ import org.json.JSONObject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import static com.example.lb.lovebox.Util.user;
 
 /**
  * A login screen that offers login via email/password.
@@ -117,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess(String email,String password) {
         _loginButton.setEnabled(true);
-        AVUser.logInInBackground(email, password, new LogInCallback<AVUser>() {
+        user.logInInBackground(email, password, new LogInCallback<AVUser>() {
             @Override
             public void done(AVUser avUser, AVException e) {
                 if (e == null) {

@@ -18,6 +18,8 @@ import com.avos.avoscloud.SignUpCallback;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+import static com.example.lb.lovebox.Util.user;
+
 /**
  * Created by terence on 3/18/17.
  */
@@ -93,7 +95,7 @@ public class SignupActivity extends AppCompatActivity {
 
     public void onSignupSuccess(String name, String email, String password) {
         _signupButton.setEnabled(true);
-        AVUser user = new AVUser();// 新建 AVUser 对象实例
+//        AVUser user = new AVUser();// 新建 AVUser 对象实例
         user.setUsername(name);// 设置用户名
         user.setPassword(password);// 设置密码
         user.setEmail(email);//设置邮箱
