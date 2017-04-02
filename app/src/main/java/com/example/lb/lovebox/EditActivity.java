@@ -54,6 +54,12 @@ public class EditActivity extends AppCompatActivity {
 //        }
     }
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(EditActivity.this, MainActivity.class));
+        finish();
+        overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+    }
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.edit_note, menu);
         return true;
